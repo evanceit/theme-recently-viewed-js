@@ -57,13 +57,16 @@ product display.
 
 ```html
 <script id="recently-viewed-template" type="text/x-template">
-    <div class="ev-block xs-12 sm-6 md-4" data-productid="<%= product.id %>">
+    <div class="recent-product" data-productid="<%= product.id %>">
         <%= fragment %>
     </div>
 </script>
 ```
 
 The `<%= fragment %>` is where our `~/theme/category/product.partial` will be rendered.
+
+Note, the `product` object illustrated in `<%= product.id %>` will be available based 
+on the [Product Search Ajax API](https://www.evance.it/help/themes/ajax/product/search-json) properties.
 
 Now, we can add our JavaScript to do two things:
 1. Show products we've already viewed.
